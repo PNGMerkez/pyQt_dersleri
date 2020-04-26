@@ -1,5 +1,5 @@
 import PyQt5.QtWidgets as ayq # Default
-import sys,os
+import sys,os,platform
 import webbrowser
 
 class pencere(ayq.QWidget):
@@ -21,7 +21,7 @@ class pencere(ayq.QWidget):
         self.buton = ayq.QPushButton("BEN BUTONUM",self)
         self.plain = ayq.QPlainTextEdit(self)
         self.line = ayq.QLineEdit(self)
-        self.line.setText(str(os.uname()))
+        self.line.setText(str(platform.uname()))
 
 
         self.buton.clicked.connect(self.butoneylemi)
